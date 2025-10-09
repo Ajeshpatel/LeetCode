@@ -22,7 +22,7 @@
 // --------------------------------SOLUTION------------------------------------------
 
 
-package easy;
+// package easy;
 import java.util.*;
 
 public class TwoSum {
