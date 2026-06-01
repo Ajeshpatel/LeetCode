@@ -37,6 +37,8 @@ class PeakIndexinMountainEle {
         System.out.print("Peak Ele Index Num Is: ");
         System.out.println(peakIndexInMountainArray(arr));
 
+        sc.close();
+
     }
 
     public static int peakIndexInMountainArray(int[] arr) {
