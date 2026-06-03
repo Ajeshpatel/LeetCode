@@ -1,4 +1,5 @@
-import java.util.Arrays;
+// Que. infosys Decode --> starter concept --> Descending order charm(kodnest app)
+
 import java.util.Scanner;
 
 public class DescendingOrderCharm {
