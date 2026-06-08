@@ -50,6 +50,36 @@ public class StringComparision {
         scanner.close();
     }
 
+    // public static int compress(char[] chars) {
+
+    //     int count = 1;
+    //     StringBuilder str = new StringBuilder("");
+    //     for (int i = 0; i<chars.length-1; i++) {
+    //         if (chars[i] == chars[i+1]) {
+    //             count++;
+    //         }
+    //         else {
+    //             str.append(chars[i]);
+    //             if (count > 1) {
+    //                 str.append(count);
+    //             }
+    //             count = 1;
+    //         }
+    //     }
+    //     str.append(chars[chars.length-1]);
+    //     if (count > 1) {
+    //         str.append(count);
+    //     }
+
+    //     for (int i = 0; i<str.length(); i++) {
+    //         char ch = str.charAt(i);
+    //         chars[i] = ch;
+    //     }
+
+    //     return str.length();
+    // }
+
+
     public static int compress(char[] chars) {
 
         int index = 0;
