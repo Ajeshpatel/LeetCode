@@ -14,7 +14,7 @@
 // Input: nums = [0]
 // Output: [0]
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class MovesZeroes {
