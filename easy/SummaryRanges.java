@@ -57,33 +57,57 @@ public class SummaryRanges {
         sc.close();
     }
 
-    public static List<String> summaryRanges(int[] nums) {
+    // public static List<String> summaryRanges(int[] nums) {
         
-        List<String> ans = new ArrayList<>();
+    //     List<String> ans = new ArrayList<>();
 
-        if (nums.length == 0) {
-            return ans;
-        }
+    //     if (nums.length == 0) {
+    //         return ans;
+    //     }
 
-        int start = nums[0];
+    //     int start = nums[0];
 
-        for (int i = 1; i <= nums.length; i++) {
+    //     for (int i = 1; i <= nums.length; i++) {
 
-            if (i == nums.length || nums[i] != nums[i - 1] + 1) {
+    //         if (i == nums.length || nums[i] != nums[i - 1] + 1) {
 
-                if (start == nums[i - 1]) {
-                    ans.add(String.valueOf(start));
-                } else {
-                    ans.add(start + "->" + nums[i - 1]);
-                }
+    //             if (start == nums[i - 1]) {
+    //                 ans.add(String.valueOf(start));
+    //             } else {
+    //                 ans.add(start + "->" + nums[i - 1]);
+    //             }
 
-                if (i < nums.length) {
-                    start = nums[i];
-                }
+    //             if (i < nums.length) {
+    //                 start = nums[i];
+    //             }
+    //         }
+    //     }
+
+    //     return ans;
+    // }
+
+    public static List<String> summaryRanges(int[] nums) {
+
+        ArrayList<String> al = new ArrayList<>();
+
+        for (int i = 0; i<nums.length; i++) {
+            int startIdx = i;
+            String start = String.valueOf(nums[i]);
+            while(i< nums.length-1 && (nums[i]) + 1 == nums[i+1]) {
+                i++;
             }
+
+            if(startIdx == i) {
+                al.add(start);
+            }
+            else{
+                al.add(start + "->" + nums[i]);
+            }
+
+
         }
 
-        return ans;
+        return al;
     }
     
 }
