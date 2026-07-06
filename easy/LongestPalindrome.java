@@ -15,7 +15,7 @@
 // Output: 1
 // Explanation: The longest palindrome that can be built is "a", whose length is 1.
 
-import java.util.HashMap;
+
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -83,7 +83,7 @@ public class LongestPalindrome {
     //     return len;
     // }
 
-    
+
     // public int longestPalindrome(String s) {
 
     //     int len = 0;
