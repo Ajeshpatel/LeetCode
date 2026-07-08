@@ -20,6 +20,8 @@ public class FirstNonRepeatingEle {
         for (int i = 0; i<arr.length; i++) {
             arr[i] = sc.nextInt();
         }
+        sc.close();
+
         HashMap<Integer, Integer> map = new HashMap<>();
         // if want sorted then use TreeMap
 
@@ -35,7 +37,5 @@ public class FirstNonRepeatingEle {
         }
 
         System.out.println("Not found");
-
-        sc.close();
     }
 }
