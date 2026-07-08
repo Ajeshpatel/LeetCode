@@ -51,7 +51,6 @@ public class GroupAnagram {
             arr[i] = sc.next();
         }
 
-        System.out.print("Maximum Product SubArray: ");
         System.out.println(groupAnagrams(arr));
 
         sc.close();
