@@ -16,7 +16,6 @@
 // Input: temperatures = [30,60,90]
 // Output: [1,1,0]
 
-import java.util.Scanner;
 import java.util.*;
 
 public class DailyTemperature {
@@ -33,10 +32,10 @@ public class DailyTemperature {
             arr[i] = sc.nextInt();
         }
 
+        sc.close();
+
         System.out.print("Temperatures Increase: ");
         System.out.println(Arrays.toString(dailyTemperatures(arr)));
-
-        sc.close();
 
     }
 
@@ -54,7 +53,7 @@ public class DailyTemperature {
         // return result;
 
         int n = temperatures.length;
-        Stack<Integer> stack = new Stack();
+        Stack<Integer> stack = new Stack<>();
         int result[] = new int[n];
 
         for(int i = 0; i<n; i++) {
