@@ -40,18 +40,30 @@ public class JumpGame {
         sc.close();
     }
 
+    // public static boolean canJump(int[] nums) {
+    //     int maxReach = 0;
+
+    //     for (int i = 0; i < nums.length; i++) {
+
+    //         if (i > maxReach) {
+    //             return false;
+    //         }
+
+    //         maxReach = Math.max(maxReach, i + nums[i]);
+    //     }
+
+    //     return true;
+    // }
+
     public static boolean canJump(int[] nums) {
-        int maxReach = 0;
+        int finalDestination = nums.length-1;
 
-        for (int i = 0; i < nums.length; i++) {
-
-            if (i > maxReach) {
-                return false;
+        for(int i = nums.length-2; i>=0; i--) {
+            if(i+nums[i] >= finalDestination) {
+                finalDestination = i;
             }
-
-            maxReach = Math.max(maxReach, i + nums[i]);
         }
 
-        return true;
+        return finalDestination == 0;
     }
 }
