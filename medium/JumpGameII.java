@@ -43,20 +43,27 @@ public class JumpGameII {
     }
 
     public static int jump(int[] nums) {
-        int jumps = 0;
-        int currentEnd = 0;
-        int farthest = 0;
 
-        for (int i = 0; i < nums.length - 1; i++) {
+        if(nums.length == 1) return 0;
+        int destination = nums.length-1;
+        int coverage = 0;
+        int lastJumpIdx = 0;
+        int jump = 0;
 
-            farthest = Math.max(farthest, i + nums[i]);
+        for (int i = 0; i<nums.length; i++) {
+            coverage = Math.max(coverage, nums[i]+i);
 
-            if (i == currentEnd) {
-                jumps++;
-                currentEnd = farthest;
+            if(i == lastJumpIdx){
+                lastJumpIdx = coverage;
+                jump++;
+
+
+                if(coverage >= destination) {
+                    return jump;
+                }
             }
         }
 
-        return jumps;
+        return jump;
     }
 }
